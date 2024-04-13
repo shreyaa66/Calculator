@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<table>
+<tr>
+  <td><input type="text" id="first"></td>
+</tr>
+
+<tr>
+    <td><input type="text" id="second"></td>
+</tr>
+</table>
+
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">*</button>
+<button onclick="div()">/</button>
+<br>
+RESULT: <label for="" id="lblresult"></label>
+
+<script>
+var first=document.querySelector("#first");
+var second=document.querySelector("#second");
+var lblresult=document.querySelector("#lblresult");
+
+function add(){
+var result=parseInt(first.value)+parseInt(second.value);
+lblresult.innerHTML=result;
+}
+
+function sub(){
+var result=parseInt(first.value)-parseInt(second.value);
+lblresult.innerHTML=result;
+}
+
+function mul(){
+var result=parseInt(first.value)*parseInt(second.value);
+lblresult.innerHTML=result;
+}
+
+function div(){
+var result=parseInt(first.value)/parseInt(second.value);
+lblresult.innerHTML=result;
+}
+</script>
+</body>
+</html>
